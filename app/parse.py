@@ -51,8 +51,8 @@ def parse_single_author(author: Tag) -> Author:
     return Author(
         name=author.select_one(".author-title").text,
         born_date=author.select_one(".author-born-date").text,
-        born_location=
-        author.select_one(".author-born-location").text.lstrip("in "),
+        born_location=author.select_one(".author-born-location")
+        .text.lstrip("in "),
         description=author.select_one(".author-description").text.strip()
     )
 
