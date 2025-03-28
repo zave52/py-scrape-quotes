@@ -90,7 +90,6 @@ def write_items_to_csv(
 
 def scrape_quotes_and_authors() -> Tuple[List[Quote], List[Author]]:
     logging.info("Start parsing quotes")
-    text = requests.get(BASE_URL).content
 
     soup = fetch_page(BASE_URL)
     all_quotes = get_single_page_quotes(soup)
