@@ -106,7 +106,7 @@ def scrape_quotes_and_authors() -> Tuple[List[Quote], List[Author]]:
 
     authors = []
     for author_url in all_authors_urls:
-        logging.info(f"Start parsing author {author_url.lstrip("/author/")}")
+        logging.info("Start parsing author", author_url.lstrip("/author/"))
 
         next_page_url = urljoin(BASE_URL, author_url)
         soup = fetch_page(next_page_url)
